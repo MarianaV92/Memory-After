@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header" role="banner" aria-label="En-tête du site">
+        <h1>MEMORY GAME</h1>
+        <nav role="navigation" aria-label="Navigation principale">
+            <ul>
+                <li><a href="#" data-page="home" aria-label="Accueil">Accueil</a></li>
+                <li><a href="#" data-page="inscription" aria-label="S'inscrire">S'inscrire</a></li>
+                <li><a href="#"data-page="profil" aria-label="Profil">Profil</a></li>
+                <li><a href="#" data-page="jouer" aria-label="Jouer" >Jouer</a></li>
+                <li>
+                    <a href="#" data-page="connexion"aria-label="Connexion">
+                        Connexion
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content" role="main" aria-live="polite">
+        <!-- Le contenu change ici en fonction de la navigation -->
+    </main>
+
+    <footer>
+        <footer class="footer" role="contentinfo" aria-label="Pied de page du site">
+            <p>© 2025 Créé par <strong>Mariana Vitikhovich</strong></p>
+    </footer>
+
+  
+<script type="module" src="./js/storageManager.js"></script>
+<script type="module" src="./js/validators.js"></script>  
+<script type="module" src="./js/authManager.js"></script> <!-- Premier à charger -->
+<script type="module" src="./js/inscription.js"></script>  
+<script type="module" src="./js/connexion.js"></script>   <!-- Dépend de authManager -->
+<script type="module" src="./js/profil.js"></script>       <!-- Dépend aussi de authManager -->
+<script  type="module" src="main.js"></script> <!-- Dernier à charger -->
+<script   src="./js/jouer.js"></script> <!-- Dernier, car pas un module -->
+
+
+
+</body>
+
+</html>
